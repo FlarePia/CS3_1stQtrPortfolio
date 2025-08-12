@@ -1,14 +1,20 @@
     
     <body>
-        <p> Hello!! :D</p>
         <script>
             //let, var, const, N/A
-            var age = 14;
-            var maxAge = 100;
-            var numPerDay = 10;
-            var totalRequired = (numPerDay * 365) * (maxAge - age)
-           
-            document.write( "You will need " + totalRequired + " fries to last you until the ripe old age of " + maxAge)
+            let age = window.prompt ("What is your age?", 14);
+            let maxAge = window.prompt ("What is your maximum age?",100);
+            let numPerDay = window.prompt ("How many fries will you eat a day?",10);
+            let bleb = window.confirm ("Are you sure with " + age + " " + maxAge + " " + numPerday + "?")
+
+            if (bleb == true){
+                var totalRequired = (numPerDay * 365) * (maxAge - age);
+                document.write ( "You will need " + totalRequired + " fries to last you until the ripe old age of " + maxAge);
+            }
+            else {
+                document.write ("Run again.");
+            }
+
         </script>
 
     </body>
