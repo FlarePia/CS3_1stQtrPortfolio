@@ -3,21 +3,38 @@
 <body>
 
    <h2> Q1 3rd Graded Exercise submitted by Pia Tonido of 9Cesium</h2>
-   <label for = "asking">Guess the number : ****</label>
-   <label for = "talking">The number is from 1 to 100</label>
+   
+   <label for = "asking">Guess the number : ****</label><br>
+   <label for = "talking">The number is from 1 to 100</label><br>
    <label for "input"> Enter your guess: </label>
+   <input type = "number" id="input"><br>
+
+   <button type= "button" onclick = "dNumber">Check It</button><br>
+   <p id = "result">Result: </p>
 
     <script>
 
        var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+       var userNumber;
 
         function checkIt() {
-              
-            
-         
-        }
+
+         document.getElementbyId("result").innerHTML = "Result:" + result;
+           
+              if (userNumber > dNumber){
+                  result = "Higher";
+              } else if (userNumber < dNumber){
+                  result = "Lower";
+              } else (userNumber == dNumber){
+                 result = "You are correct!";
+              }
+                 
+         }
     </script>
 
+   <footer>
+      https://www.w3schools.com/js/js_if_else.asp
+   </footer>
 </body>
 
 </html>
