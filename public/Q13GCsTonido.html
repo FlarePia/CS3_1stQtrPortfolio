@@ -18,8 +18,6 @@
        var userNumber;
 
         function checkIt() {
-
-         document.getElementbyId("result").innerHTML = "Result:" + result;
            
               if (userNumber > dNumber){
                   result = "Higher";
@@ -28,6 +26,8 @@
               } else (userNumber == dNumber){
                  result = "You are correct!";
               }
+
+           document.getElementbyId("result").innerHTML = "Result:" + result;
                  
          }
     </script>
