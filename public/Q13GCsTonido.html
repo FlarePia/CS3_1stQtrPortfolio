@@ -9,8 +9,9 @@
    <label for "input"> Enter your guess: </label>
    <input type = "number" id="input"><br><br>
 
-   <button type= "button" onclick = "checkIt">Check It</button><br><br>
+   <button type= "button" onclick = "checkIt()">Check It</button><br><br>
    <p id = "result">Result: </p>
+
 
     <script>
 
@@ -18,23 +19,25 @@
 
         function checkIt() {
 
-          var userNumber = Number(document.getElementbyId("number").value);
+          var userNumber = Number(document.getElementById("input").value);
            
               if (userNumber > dNumber){
                   result = "Higher";
               } else if (userNumber < dNumber){
                   result = "Lower";
-              } else (userNumber == dNumber){
+              } else {
                  result = "You are correct!";
               }
 
-           document.getElementbyId("result").innerHTML = "Result:" + result;
+           document.getElementById("result").innerHTML = "Result:" + result;
                  
          }
     </script>
 
+      
+
    <footer>
-      https://www.w3schools.com/js/js_if_else.asp
+      References: https://www.w3schools.com/js/js_if_else.asp
    </footer>
 </body>
 
