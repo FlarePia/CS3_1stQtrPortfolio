@@ -15,9 +15,10 @@
     <script>
 
        var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
-       var userNumber;
 
         function checkIt() {
+
+          var userNumber = Number(document.getElementbyId("number").value);
            
               if (userNumber > dNumber){
                   result = "Higher";
